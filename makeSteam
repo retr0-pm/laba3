@@ -1,0 +1,40 @@
+all: menuSteam
+
+menuSteam: add.o removee.o change.o f_to_arr.o main.o n_of_str.o output.o search_developer.o search_discount.o search_name.o search_price.o
+	gcc add.o removee.o change.o f_to_arr.o main.o n_of_str.o output.o search_developer.o search_discount.o search_name.o search_price.o -o menuSteam
+
+add.o: add.c
+	gcc -c add.c
+
+removee.o: removee.c  
+	gcc -c removee.c
+
+change.o: change.c  
+	gcc -c change.c
+
+f_to_arr.o: f_to_arr.c  
+	gcc -c f_to_arr.c
+
+main.o: main.c
+	gcc -c main.c
+
+n_of_str.o: n_of_str.c  
+	gcc -c n_of_str.c
+
+output.o: output.c  
+	gcc -c output.c
+
+search_developer.o: search_developer.c  
+	gcc -c search_developer.c
+
+search_discount.o: search_discount.c  
+	gcc -c search_discount.c
+
+search_name.o: search_name.c  
+	gcc -c search_name.c
+
+search_price.o: search_price.c  
+	gcc -c search_price.c
+
+clean:
+	rm -rf *.o menuSteam
